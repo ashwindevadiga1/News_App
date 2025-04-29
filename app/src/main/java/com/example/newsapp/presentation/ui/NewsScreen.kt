@@ -84,12 +84,12 @@ fun NewsScreen(navController: NavController, newsViewModel: NewsViewModel = hilt
                 SwipeRefresh(
                     state = rememberSwipeRefreshState(isRefreshing),
                     onRefresh = {
-                        selectedCountry = "us"
-                        selectedCategory = "business"
+                        selectedCountry = ""
+                        selectedCategory = ""
                         newsViewModel.refreshArticles(
-                        selectedCountry,
-                        selectedCategory,
-                        selectedLanguage
+                        "us",
+                        "business",
+                        "en"
                     ) }
                 ) {
                     LazyColumn {
